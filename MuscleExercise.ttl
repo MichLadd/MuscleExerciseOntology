@@ -124,7 +124,7 @@ ex:targetsMuscle rdf:type owl:ObjectProperty .
 
 ###  http://www.example.org/muscleexercise#numberOfRepetitions
 :numberOfRepetitions rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :Set ;
+                     rdfs:domain :Exercise ;
                      rdfs:range xsd:integer ;
                      rdfs:label "number of repetitions" .
 
@@ -9561,27 +9561,27 @@ ex:targetsMuscle rdf:type owl:ObjectProperty .
 
 ###  http://www.example.org/exercise#HeavyWeightExercise
 ex:HeavyWeightExercise rdf:type owl:Class ;
-                       rdfs:subClassOf :ExerciseType .
+                       rdfs:subClassOf :Exercise .
 
 
 ###  http://www.example.org/exercise#HighRepetitionExercise
 ex:HighRepetitionExercise rdf:type owl:Class ;
-                          rdfs:subClassOf :ExerciseType .
+                          rdfs:subClassOf :Exercise .
 
 
 ###  http://www.example.org/exercise#LongRestExercise
 ex:LongRestExercise rdf:type owl:Class ;
-                    rdfs:subClassOf :ExerciseType .
+                    rdfs:subClassOf :Exercise .
 
 
 ###  http://www.example.org/exercise#MultiMuscleExercise
 ex:MultiMuscleExercise rdf:type owl:Class ;
-                       rdfs:subClassOf :ExerciseType .
+                       rdfs:subClassOf :Exercise .
 
 
 ###  http://www.example.org/exercise#UpperBodyExercise
 ex:UpperBodyExercise rdf:type owl:Class ;
-                     rdfs:subClassOf :ExerciseType .
+                     rdfs:subClassOf :Exercise .
 
 
 ###  http://www.example.org/muscleexercise#Biceps
@@ -9613,7 +9613,8 @@ ex:UpperBodyExercise rdf:type owl:Class ;
 
 
 ###  http://www.example.org/muscleexercise#ExerciseType
-:ExerciseType rdf:type owl:Class .
+:ExerciseType rdf:type owl:Class ;
+              rdfs:subClassOf :Exercise .
 
 
 ###  http://www.example.org/muscleexercise#Glutes
